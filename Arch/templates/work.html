@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главное</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/work.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/work.js') }}"></script>
+</head>
+<body>
+    <header class="header" id="header">
+
+       {% include "header_content.html" %}
+
+        <div class="container">
+            <div id="left_block">
+                <div class="kira">
+    {% for work in works %}
+
+    <li class="work-item work-blue work-1"><i class="work-icon"></i></l>
+    <div class="work-text fr"><p><span color="black"> {{work.work.name}}</span></p><p>Стаж: 0</p><p> + {{work.work.count}} {{work.work.item.name}}/{{work.work.time}} мин </p>
+
+    </div>
+        {% if work.idwork == data[0] %}
+        <button class="untrigged-work_button" data-id="{{work.idwork}}">Работа закончится в {{data[1]}}</button>
+        {% else  %}
+            {% if data[0] == None %}
+            <button class="work_button" data-id="{{work.idwork}}">Работать</button>
+            {% else  %}
+            <button class="untrigged-work_button" data-id="{{work.idwork}}">Вы уже работаете</button>
+            {% endif  %}
+        {% endif  %}
+    {%  endfor %}
+</div>
+        </div>
+        </div>
+        
+    </header>
+</body>
+</html>

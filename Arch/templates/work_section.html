@@ -1,0 +1,18 @@
+<div class="kira">
+    {% for work in works %}
+
+    <li class="work-item work-blue work-1"><i class="work-icon"></i></l>
+    <div class="work-text fr"><p><span color="black"> {{work.work.name}}</span></p><p>Стаж: 0</p><p> + {{work.work.count}} {{work.work.item.name}}/{{work.work.time}} мин </p>
+
+    </div>
+        {% if work.idwork == data[0] %}
+        <button class="untrigged-work_button" data-id="{{work.idwork}}">Работа закончится в {{data[1]}}</button>
+        {% else  %}
+            {% if data[0] == None %}
+            <button class="work_button" data-id="{{work.idwork}}">Работать</button>
+            {% else  %}
+            <button class="untrigged-work_button" data-id="{{work.idwork}}">Вы уже работаете</button>
+            {% endif  %}
+        {% endif  %}
+    {%  endfor %}
+</div>

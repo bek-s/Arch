@@ -1,0 +1,152 @@
+
+body {
+    background:#111111;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Open Sans';
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.div {
+    display: block;
+}
+#header_menu {
+         width: 100%;
+         height: 30px;
+         box-shadow: 0 -3px rgb(95, 16, 16) inset;
+}
+#header_menu, .ib, .dd-selected {
+    background-color: #252525;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(0 0 0);
+}
+.map_menu {
+    background-image: url(static/img/maps.svg);
+}
+.item_menu {
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+    background-size: 16px 16px;
+}
+
+.header_menu_item {
+    cursor: pointer;
+    float: left;
+    text-align: left;
+    padding: 7px;
+    height: 16px;
+    padding-left: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    padding-right: 6px;
+}
+.work_menu {
+    background-image: url(static/img/work.svg);
+}
+.wars_menu {
+    background-image: url(static/img/war.svg);
+}
+.storage_menu {
+    background-image: url(static/img/cklad.svg);
+}
+#content {
+    width: 100%;
+    position: absolute;
+}
+#content {
+    width: 1140px;
+    max-width: 1140px;
+    min-width: 1140px;
+    margin: 0 auto;
+    left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%)
+}
+#index_stronge, #index_profil, #index_stat, #index_block {
+    width: 200px;
+    position: absolute;
+    right: 20px;
+    top: 137px;
+    background-repeat: no-repeat;
+    background-position: 166px 2px;
+}
+#index_profil {
+    width: 500px;
+    height: 350px;
+    background: rgb(56, 55, 55);
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+    background-image: none;
+}
+#index_block {
+    width: 570px;
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: rgb(56, 55, 55);
+    background-repeat: no-repeat;
+    background-position: 166px 2px;
+}
+#index_stat {
+    width: 500px;
+    height: 230px;
+    background: rgb(56, 55, 55);
+    top: 390px;
+    left: 20px;
+    overflow: hidden;
+    background-image: none;
+}
+#index_stronge {
+    width: 570px;
+    height: 480px;
+    position: absolute;
+    right: 20px;
+    top: 140px;
+    text-align: center;
+    background: rgb(56, 55, 55);
+    background-repeat: no-repeat;
+    background-position: 166px 2px;
+}
+a.button7 {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 -3px rgb(95, 16, 16) inset;
+    transition: 0.2s;
+}
+a.button7:hover { background: rgb(175, 24, 24); }
+a.button7:active {
+  background: rgb(0, 0, 0);
+  box-shadow: 0 3px rgb(0, 0, 0) inset;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+} 
+.right {
+    display: inline;
+}
+.left, .right {
+    padding: 10px;
+}
+.stat {
+    padding: 10px;
+}
+.stronge {
+    padding: 10px;
+}
+.buttom7 {
+    margin-left: 50px;
+}

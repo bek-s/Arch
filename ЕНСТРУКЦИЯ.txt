@@ -1,0 +1,5 @@
+1. Скачать pycharm https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
+2. Открыть ету папку в программе, она подхватит проект и библиотеки (наверна)
+3. Картинки, ксс и жс хранить в папке static
+4. Шаблоны страниц в папке templates
+5. Примеры подключения файлов в имеющихся шаблонах

@@ -1,0 +1,45 @@
+
+                    <div id="perk0">
+                        <div class="perk1">Сила </div><div class="perk2">{{current_user.skillaccount[0].skill1}}
+                        {% if skill[0] == 1 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="1">+</a>
+                        {% endif %}
+                    </div>
+                    <br>
+                    <br>
+                    <div class="perk1">Интеллект </div><div class="perk2">{{current_user.skillaccount[0].skill2}}
+                        {% if skill[0] == 2 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="2">+</a>
+                        {% endif %}
+                    </div>
+                    <br>
+                    <br>
+                    <div class="perk1">Исследование </div><div class="perk2">{{current_user.skillaccount[0].skill3}}
+                        {% if skill[0] == 3 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="3">+</a>
+                        {% endif %}
+                    </div>
+                    <br>
+                    <br>
+                    <div class="perk1">Технология </div><div class="perk2">{{current_user.skillaccount[0].skill4}}
+                        {% if skill[0] == 4 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="4">+</a>
+                        {% endif %}
+                    </div>
+                    </div>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iaznaiuktokira</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    
+</head>
+<style>
+    body{
+        background-image:url("{{ url_for('static', filename='img/main.png') }}");
+    }
+</style>
+
+<body>
+       <div id="index_indent">
+       </div>
+       <div id="content">
+           <div id="left">
+               <div class="pw">
+               <h1>Political World</h1>
+               <h2>Создавай свои государства в PW - симуляторе политики, войны, экономики и СМИ!
+
+                Здесь вы сможете создавать политические партии,
+                пробиваться в парламент и издавать законы, 
+                побывать в сотнях регионов и добывать в них 
+                нефть, руду, золото, уран и алмазы и создавать 
+                из них вооружение или строить Школы и Военные
+                базы. Здесь вы будете принимать участие в 
+                морских и космических войнах, создавать свои
+                газеты и писать статьи, формировать свое
+                государство из регионов реального мира
+                и выбирать ему форму правления: диктатура 
+                или президентская республика? Построить 
+                свою империю или отдать власть народу 
+                и создать реальную демократию? Вы диктатор 
+                или избранный президент? Решать вам!
+                 </h2>
+                </div>
+           </div>
+           <div id="right">
+               <a href='https://oauth.vk.com/authorize?client_id={{client_id}}&scope=offline&display=page&redirect_uri={{redirect_uri}}&response_type=token&v=5.59'>
+                   <img src={{ url_for('static', filename='img/vk.svg') }} width="40px" height="40px"> Войти через ВК
+               </a>
+               <a href="#"><img src={{ url_for('static', filename='img/google.svg') }} width="40px" height="40px"> Войти через Google</a>
+           </div>
+    </div>
+
+</body>
+</html>

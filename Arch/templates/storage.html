@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главное</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stronge.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header" id="header">
+        {% include "header_content.html" %}
+
+        <div class="container">
+
+            <div id="block">
+                <div class="kira">
+                    {% for storage in storages %}
+                        <li class="stronge-item work-blue work-1">
+                            <div class="stronge-text fr"><span class="stronge_color" data-id="{{ storage.item.iditem }}"> {{storage.item.name}} </span><span class="stronge_color1">{{ storage.count }} шт.</span>
+                            </div>
+                        <div class="stronge_quantity"></div>
+                    {% endfor %}
+                </div>
+            </div>
+       
+       
+            <div id="craft"></div>
+        </div>
+    </header>
+</body>
+</html>

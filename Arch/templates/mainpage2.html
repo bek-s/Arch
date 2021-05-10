@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главное</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <header class="header" id="header">
+
+        {% include "header_content.html" %}
+
+        <div class="container">
+
+            <div class="left_block">
+
+                <div id="profil">
+                    <div class="left">
+                        <div class="art"></div>
+                        <div class="art2">
+                            <form enctype="multipart/form-data" method="post">
+                                <p><input type="file" name="f">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="nikname">
+                            <p>{{current_user.name}}</p>  <!--  Имя -->
+                            <p>Партия:</p> 
+                            <p>Нация:</p>
+                            <p>Опыт: {{current_user.exp}}</p>
+                            <!-- Остальное потом придумам-ешь -->
+                            <p>Вы назодитесь в государстве <b>{{ current_user.loc.region.countryregionregion[0].country.name }}</b></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="perk">
+                    <div id="perk0">
+                        <div class="perk1">Сила </div><div class="perk2">{{current_user.skillaccount[0].skill1}}
+                        {% if skill[0] == 1 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="1">+</a>
+                        {% endif %}
+
+                    </div>
+                    <br>
+                    <br>
+                    <div class="perk1">Интеллект </div><div class="perk2">{{current_user.skillaccount[0].skill2}}
+                        {% if skill[0] == 2 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="2">+</a>
+                        {% endif %}
+                    </div>
+                    <br>
+                    <br>
+                    <div class="perk1">Исследование </div><div class="perk2">{{current_user.skillaccount[0].skill3}}
+                        {% if skill[0] == 3 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="3">+</a>
+                        {% endif %}
+                    </div>
+                    <br>
+                    <br>
+                    <div class="perk1">Технология </div><div class="perk2">{{current_user.skillaccount[0].skill4}}
+                        {% if skill[0] == 4 %}
+                        <i>{{skill[1]}}</i>
+                        {% elif skill[0] != None %}
+
+                        {% else %}
+                            <a class="skillup" href="#" data-skill="4">+</a>
+                        {% endif %}
+                    </div>
+                    </div>
+                </div>
+
+            </div> 
+
+            <div class="right_block">
+
+                <div id="region">
+                    <div class="region2">
+                        <b>Регион: {{current_user.loc.region.name}}</b>
+                        <b><p>Дорога: {{current_user.loc.region.infr1}}</p></b>
+                        <b><p>Качество дороги: {{current_user.loc.region.infr2}}</p></b>
+                        <b><p>Железные дороги: {{current_user.loc.region.infr3}}</p></b>
+                        <b><p>Причал дережаблей: {{current_user.loc.region.infr4}}</p></b>
+                        <b><p>Порт: {{current_user.loc.region.infr5}}</p></b>
+                        <b><p>Размер горнизона: {{current_user.loc.region.infr6}}</p></b>
+                        <b><p>Верфи: {{current_user.loc.region.infr7}}</p></b>
+                        <b><p>Локация: {{current_user.loc.name}}</p></b>
+
+
+                    </div>
+                </div>
+   
+                <div id="war">
+   
+                </div>
+   
+                <div id="chat">
+                    chat
+   
+                </div>
+
+            </div> 
+           
+        </div>
+        
+    </header>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% for market in markets %}
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Продавец <a href="#">{{market.account.name}}</a>
+                            <span class="badge bg-secondary">
+                                {{market.item.name}}
+                                <span class="badge bg-primary">
+                                    {{market.count}}
+                                </span>
+                            </span>
+                        </h5>
+                        <b>ЗА</b>
+                        <h5 class="card-title">
+                            <span class="badge bg-secondary">
+                                {{market.item2.name}}
+                                <span class="badge bg-primary">
+                                    {{market.cost}}
+                                </span>
+                            </span>
+                        </h5>
+                        <div class="row g-3 align-items-center">
+                            <input type="text" id="input_count_for_{{ market.idmarket }}" class="form-control" aria-describedby="Количество преобретаемого товара">
+                            <a href="#" class="btn btn-primary buy_button" data-id="{{ market.idmarket }}">Купить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
